@@ -33,19 +33,20 @@ export default {
 
 #container{
   padding-top:20px;
-  margin-top:20px;
   width:100vw;
   color:#2d477f;
   background-color:#eaeaea;
   display:flex;
   flex-direction:column;
   align-items:center;
+
 }
 #contacts{
   display:flex;
   justify-content:space-around;
   align-items:center;
   width:100%;
+
 }
 #contacts--contact{
   text-align:left;

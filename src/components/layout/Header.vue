@@ -7,7 +7,7 @@
 
        <b-collapse id="nav-collapse" is-nav>
          <b-navbar-nav>
-           <b-nav-item href="#">JIDO자랑</b-nav-item>
+           <b-nav-item to="/">JIDO자랑</b-nav-item>
            <b-nav-item href="#">작품</b-nav-item>
            <b-nav-item href="#">배경화면</b-nav-item>
 
@@ -16,17 +16,17 @@
              <template #button-content >
                <b-icon icon="three-dots"></b-icon>
              </template>
-             <b-dropdown-item href="#">About JIDO.VILL</b-dropdown-item>
-             <b-dropdown-item href="#">JIDO.Market</b-dropdown-item>
-             <b-dropdown-item href="#">공지사항</b-dropdown-item>
-             <b-dropdown-item href="#">도움말</b-dropdown-item>
+             <b-dropdown-item to="/login">About JIDO.VILL</b-dropdown-item>
+             <b-dropdown-item ><router-link to="/">JIDO.Market</router-link></b-dropdown-item>
+             <b-dropdown-item ><router-link to="/">공지사항</router-link></b-dropdown-item>
+             <b-dropdown-item ><router-link to="/">도움말</router-link></b-dropdown-item>
            </b-nav-item-dropdown>
          </b-navbar-nav>
 
          <!-- Right aligned nav items -->
          <b-navbar-nav class=" ml-auto">
            <Search class="mx-sm-3"></Search>
-           <b-button class=" " pill variant="outline-dark"> 로그인 </b-button>
+           <b-button class="outline-secondary rounded-pill" to="/login"><a>로그인</a></b-button>
          </b-navbar-nav>
        </b-collapse>
      </b-navbar>
@@ -51,6 +51,7 @@ export default {
 #nav {
   padding: 20px 60px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /*background-color: white;*/
 }
 
 </style>
