@@ -6,6 +6,7 @@ import FindPwd from '../views/Login/FindPwd.vue'
 import ChgPwd from '../views/Login/ChgPwd.vue'
 import SignUpAgree from '../views/Login/SignUpAgree.vue'
 import SignUp from '../views/Login/SignUp.vue'
+import Info from '../views/Account/Info.vue'
 
 Vue.use(VueRouter)
 
@@ -47,6 +48,11 @@ const routes: Array<RouteConfig> = [
     path: '/SignUpAgree',
     name: 'SignUpAgree',
     component: SignUpAgree
+  },
+  {
+    path: '/Info',
+    name: 'Info',
+    component: Info
   },
 ]
 

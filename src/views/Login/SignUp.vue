@@ -6,7 +6,6 @@
       <!--     <img src="@/assets/붱붱.png" />-->
     </div>
     <div>
-
       <div class="card mb-3" >
         <div class="card-body">
           <div class="d-flex align-items-center">
@@ -24,31 +23,24 @@
           <hr>
 
           <div class="px-5">
-            <div class="form-group">
-              <label>아이디</label>
-              <div class="d-flex">
-                <b-input type="text" class="form-control form-control-lg mr-3" />
-                <b-button class="btn btn-secondary rounded-pill align-self-center" type="submit" style="width: 120px; padding:0.6rem " to="/"><a style="color: white; bottom: 50%">중복체크</a></b-button>
-              </div>
-              <label style="color: blue"> 영문자, 숫자, _ 만 입력 가능. 최소 4자이상 입력하세요.</label>
-            </div>
+            <InputId></InputId>
 
-            <div class="form-group d-flex ">
-              <div class="mr-5">
-                <label>비밀번호</label>
-                <b-input type="email" class="form-control form-control-lg"/>
-              </div>
-              <div>
-                <label>비밀번호 확인</label>
-                <b-input type="email" class="form-control form-control-lg"/>
-              </div>
-            </div>
+            <b-form-group >
+                <div class="mb-3">
+                  <label>비밀번호</label>
+                  <b-input type="email" class="form-control form-control-lg"/>
+                </div>
+                <div>
+                  <label>비밀번호 확인</label>
+                  <b-input type="email" class="form-control form-control-lg"/>
+                </div>
+            </b-form-group>
           </div>
 
         </div>
       </div>
 
-      <div class="card mb-3" >
+      <div class="card " >
         <div class="card-body">
           <div class="d-flex align-items-center">
             <b-icon class="h3 mr-2 mt-2" icon="person-fill" variant="secondary"></b-icon>
@@ -57,54 +49,27 @@
           <hr>
 
           <div class="px-5">
-            <div class="form-group">
-              <label>이름</label>
-              <div class="d-flex">
-                <b-input type="text" class="form-control form-control-lg mr-3" />
-                <b-button class="btn btn-secondary rounded-pill align-self-center" type="submit" style="width: 200px; padding:0.6rem " to="/"><a style="color: white; bottom: 50%">휴대폰 본인확인</a></b-button>
-              </div>
-              <label style="color: blue"> 휴대폰 본인확인 후에 이름과 휴대폰번호가 자동 입력됩니다.</label>
-            </div>
+           <InputInfo></InputInfo>
 
-            <div class="form-group">
+            <b-form-group>
               <label>닉네임</label>
-              <div class="d-flex">
                 <b-input type="text" class="form-control form-control-lg mr-3" />
-               </div>
-              <label style="color: blue"> 공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상) 닉네임을 바꾸시면 앞으로 60일 이내에는 변경 할 수 없습니다.</label>
-            </div>
+              <label style="color: blue" class="mb-0"> 공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상) 닉네임을 바꾸시면 앞으로 60일 이내에는 변경 할 수 없습니다.</label>
+            </b-form-group>
 
-            <div class="form-group">
+            <b-form-group>
               <label>E-mail</label>
-              <div class="d-flex">
                 <b-input type="email" class="form-control form-control-lg mr-3" />
-              </div>
-            </div>
+            </b-form-group>
 
-            <div class="form-group">
-              <label>휴대폰번호</label>
-              <div class="d-flex">
-                <b-input type="number" class="form-control form-control-lg mr-3" />
-              </div>
-            </div>
+            <InputPost></InputPost>
 
-            <div class="form-group d-flex ">
-              <div class="mr-5">
-                <label>비밀번호</label>
-                <b-input type="email" class="form-control form-control-lg" />
-              </div>
-              <div>
-                <label>비밀번호 확인</label>
-                <b-input type="email" class="form-control form-control-lg"/>
-              </div>
-            </div>
           </div>
 
         </div>
       </div>
 
-
-      <b-button class="w-100 btn btn-lg btn-secondary rounded-pill" type="submit" to="/"><a style="color: white">회원가입</a></b-button>
+      <b-button class="w-100 btn btn-lg btn-secondary rounded-pill my-5" type="submit" to="/"><a style="color: white">회원가입</a></b-button>
 
     </div>
   </main>
@@ -112,7 +77,11 @@
 </template>
 
 <script>
+import InputPost from "@/components/InputPost";
+import InputId from "@/components/InputId";
+import InputInfo from "@/components/InputInfo";
 export default {
+  components: {InputInfo, InputId, InputPost},
   data() {
     return {
       text: `

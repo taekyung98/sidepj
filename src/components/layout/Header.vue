@@ -25,8 +25,10 @@
 
          <!-- Right aligned nav items -->
          <b-navbar-nav class=" ml-auto">
-           <Search class="mx-sm-3"></Search>
-           <b-button class="outline-secondary rounded-pill" to="/login"><a>로그인</a></b-button>
+           <Search class="mx-sm-3 "></Search>
+
+           <NavLogin></NavLogin>
+
          </b-navbar-nav>
        </b-collapse>
      </b-navbar>
@@ -37,19 +39,20 @@
 <script>
 // 디지털 데이터 바인딩 or 이벤트 캐치 or 서버통신을 위한 자바스크립트 코드 삽입부분
 import Search from "@/components/Search";
+import NavLogin from "@/components/NavLogin";
 
 export default {
   name: 'Header',
   components:{
-    Search
-
+    Search,
+    NavLogin
   },
 }
 </script>
 
 <style>
 #nav {
-  padding: 20px 60px;
+  padding: 20px 120px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /*background-color: white;*/
 }

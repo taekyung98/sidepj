@@ -7,7 +7,7 @@
     </div>
     <div class="card ">
       <div class="card-body ">
-        <form>
+        <b-form>
           <h2 class="h3 mb-3 font-weight-bold text-center">비밀번호 변경</h2>
 
           <div class="form-group">
@@ -22,7 +22,7 @@
 
           <b-button class="w-100 btn btn-lg btn-secondary rounded-pill" type="submit" to="/"><a style="color: white"> 비밀번호 변경하기</a></b-button>
 
-        </form>
+        </b-form>
       </div>
     </div>
   </main>

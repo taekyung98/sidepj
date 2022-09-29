@@ -7,7 +7,7 @@
     </div>
     <div class="card ">
       <div class="card-body ">
-        <form>
+        <b-form>
           <h2 class="h3 mb-3 font-weight-bold text-center">비밀번호 찾기</h2>
 
           <div class="form-group">
@@ -26,12 +26,13 @@
           <div class="form-group mb-4">
             <label class="mr-3">인증번호</label>
             <label style="color: blue"> 대충 여기에 시간제한 넣을거임</label>
+
             <b-input type="text" class="form-control form-control-lg" placeholder="인증번호를 입력하세요" />
           </div>
 
           <b-button class="w-100 btn btn-lg btn-secondary rounded-pill" type="submit" to="/ChgPwd"><a style="color: white"> 비밀번호 변경</a></b-button>
 
-        </form>
+        </b-form>
       </div>
     </div>
   </main>
