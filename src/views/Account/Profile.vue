@@ -8,30 +8,19 @@
           <div style="padding: 50px 200px">
             <b-form-group >
               <div class="mb-3 d-flex justify-content-center" >
-                <label class="col-sm-3  align-self-center">로그인 ID</label>
-                <label class="col-sm-6">ID</label>
-              </div>
-              <div class="mb-3 d-flex justify-content-center" >
-                <label class="col-sm-3 align-self-center">이름</label>
+                <label class="col-sm-3 align-self-center">한 줄 소개</label>
                 <b-input type="text" class="form-control form-control-lg col-sm-6" placeholder="이름을 입력해 주세요."/>
               </div>
 
-              <div class="mb-3 d-flex justify-content-center" >
-                <label class="col-sm-3  align-self-center">영문 이름</label>
-                <b-input type="text" class="form-control form-control-lg col-sm-6" placeholder="영문 이름을 입력해 주세요."/>
-              </div>
-
-              <UploadProfile></UploadProfile>
-
-              <ChooseGreeting></ChooseGreeting>
+              <ChooseGenre></ChooseGenre>
 
               <div class="mb-3 d-flex justify-content-center" >
-                <label class="col-sm-3  align-self-center">프로필 URL</label>
+                <label class="col-sm-3  align-self-center">상세 소개</label>
                 <b-input type="text" class="form-control form-control-lg col-sm-6"/>
               </div>
 
               <div class="mb-3 d-flex justify-content-center" >
-                <label class="col-sm-3  align-self-center">기본 이메일</label>
+                <label class="col-sm-3  align-self-center">웹사이트</label>
                 <b-input type="text" class="form-control form-control-lg col-sm-6"/>
               </div>
               <br>
@@ -46,7 +35,6 @@
                   <b-button class="btn btn-lg btn-secondary rounded-pill mr-3" type="submit" to="/"><a style="color: white">동의 및 저장</a></b-button>
                   <b-button class="btn btn-lg rounded-pill" variant="outline-secondary" type="submit" to="">취소</b-button>
                 </div>
-                <DeleteAccount></DeleteAccount>
               </div>
 
             </b-form-group>
@@ -63,8 +51,9 @@
 import ChooseGreeting from "@/components/ChooseGreeting";
 import UploadProfile from "@/components/UploadProfile";
 import DeleteAccount from "@/components/DeleteAccount";
+import ChooseGenre from "@/components/ChooseGenre";
 export default {
-  components: {UploadProfile,ChooseGreeting,DeleteAccount}
+  components: {ChooseGenre}
 }
 
 

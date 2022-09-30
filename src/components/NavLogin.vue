@@ -15,7 +15,7 @@
       </div>
 
       <div v-else>
-        <b-button class="outline-secondary rounded-pill" to="/login"><a>로그인</a></b-button>
+        <b-button class="outline-secondary rounded-pill" to="/login/login"><a>로그인</a></b-button>
       </div>
 
     </div>

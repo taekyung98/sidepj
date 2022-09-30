@@ -7,6 +7,7 @@ import ChgPwd from '../views/Login/ChgPwd.vue'
 import SignUpAgree from '../views/Login/SignUpAgree.vue'
 import SignUp from '../views/Login/SignUp.vue'
 import Info from '../views/Account/Info.vue'
+import Profile from '../views/Account/Profile.vue'
 
 Vue.use(VueRouter)
 
@@ -25,34 +26,39 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/login',
+    path: '/Login/login',
     name: 'login',
     component: Login
   },
   {
-    path: '/findPwd',
+    path: '/Login/findPwd',
     name: 'findPwd',
     component: FindPwd
   },
   {
-    path: '/ChgPwd',
+    path: '/Login/ChgPwd',
     name: 'ChgPwd',
     component: ChgPwd
   },
   {
-    path: '/SignUp',
+    path: '/Login/lSignUp',
     name: 'SignUp',
     component: SignUp
   },
   {
-    path: '/SignUpAgree',
+    path: '/Login/SignUpAgree',
     name: 'SignUpAgree',
     component: SignUpAgree
   },
   {
-    path: '/Info',
+    path: '/Account/Info',
     name: 'Info',
     component: Info
+  },
+  {
+    path: '/Account/Profile',
+    name: 'Profile',
+    component: Profile
   },
 ]
 

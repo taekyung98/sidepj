@@ -27,7 +27,7 @@
           <b-button class="w-100 btn btn-lg btn-secondary rounded-pill" type="submit" to="/"><a style="color: white">Sign in</a></b-button>
         </b-form>
          <div class="d-flex justify-content-center txt">
-           <p class="mt-3 " :to="{name: 'findPwd'}">
+           <p class="mt-3 ">
              <router-link :to="{name: 'findPwd'}" >비밀번호 찾기</router-link>
            </p>
            <p class="mt-3 col-md-1 ">|</p>

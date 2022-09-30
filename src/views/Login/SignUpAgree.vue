@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <b-button class="w-100 btn btn-lg btn-secondary rounded-pill" type="submit" to="/SignUp"><a style="color: white">회원가입</a></b-button>
+      <b-button class="w-100 btn btn-lg btn-secondary rounded-pill" type="submit" to="/login/SignUp"><a style="color: white">회원가입</a></b-button>
 
     </div>
   </main>
