@@ -1,9 +1,9 @@
 <template>
   <body>
-  <main class="form-info min-vh-100 ">
+  <main class="form-info min-vh-100">
 
       <div class="card mb-3" >
-        <div class="card-body">
+        <div class="card-body" >
 
           <div style="padding: 50px 200px">
             <b-form-group >
@@ -12,12 +12,12 @@
                 <b-input type="text" class="form-control form-control-lg col-sm-6" placeholder="이름을 입력해 주세요."/>
               </div>
 
-              <ChooseGenre></ChooseGenre>
-
               <div class="mb-3 d-flex justify-content-center" >
                 <label class="col-sm-3  align-self-center">상세 소개</label>
                 <b-input type="text" class="form-control form-control-lg col-sm-6"/>
               </div>
+
+              <ChooseGenre></ChooseGenre>
 
               <div class="mb-3 d-flex justify-content-center" >
                 <label class="col-sm-3  align-self-center">웹사이트</label>

@@ -1,42 +1,57 @@
 <template>
   <div class="mb-3 d-flex justify-content-center" >
     <label class="col-sm-3  align-self-center">활동 분야</label>
-    <b-form-group label="Using options array:">
-      <b-form-checkbox-group
-          class="col-sm-6"
-          style="height: calc(1.5em + 1rem + 9px);"
-          id="checkbox-group-1"
-          v-model="selected"
-          :options="options"
-          name="flavour-1"
-      ></b-form-checkbox-group>
+    <b-form-group label-for="tags-component-select" class="col-sm-6 p-0"  >
+      <!-- Prop `add-on-change` is needed to enable adding tags vie the `change` event -->
+      <b-form-tags
+          id="tags-component-select"
+          v-model="value"
+          size="lg"
+          class="mb-2"
+          add-on-change
+          no-outer-focus
+      >
+        <template v-slot="{ tags, inputAttrs, inputHandlers, disabled, removeTag }">
+          <ul v-if="tags.length > 0" class="list-inline d-inline-block mb-2">
+            <li v-for="tag in tags" :key="tag" class="list-inline-item">
+              <b-form-tag
+                  @remove="removeTag(tag)"
+                  :title="tag"
+                  :disabled="disabled"
+                  variant="secondary"
+              >{{ tag }}</b-form-tag>
+            </li>
+          </ul>
+          <b-form-select
+              style="border: white"
+              v-bind="inputAttrs"
+              v-on="inputHandlers"
+              :disabled="disabled || availableOptions.length === 0"
+              :options="availableOptions"
+          >
+            <template #first>
+              <!-- This is required to prevent bugs with Safari -->
+              <option disabled value="">활동분야를 선택해주세요. (최대 3개)</option>
+            </template>
+          </b-form-select>
+        </template>
+      </b-form-tags>
     </b-form-group>
-
-    <b-form-group label="Using sub-components:">
-      <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
-        <b-form-checkbox value="orange">Orange</b-form-checkbox>
-        <b-form-checkbox value="apple">Apple</b-form-checkbox>
-        <b-form-checkbox value="pineapple">Pineapple</b-form-checkbox>
-        <b-form-checkbox value="grape">Grape</b-form-checkbox>
-      </b-form-checkbox-group>
-    </b-form-group>
-
-    <div>Selected: <strong>{{ selected }}</strong></div>
   </div>
 </template>
-
 <script>
 export default {
   name: "SelectCountry",
   data() {
     return {
-      selected: [], // Must be an array reference!
-      options: [
-        { text: 'Orange', value: 'orange' },
-        { text: 'Apple', value: 'apple' },
-        { text: 'Pineapple', value: 'pineapple' },
-        { text: 'Grape', value: 'grape' }
-      ]
+      options: ['일러스트','사진','회화','사운드','조소/공예','디자인','캘리그라피','그림책','애니메이션'],
+      value: [], // Must be an array reference!
+      noMore: false
+    }
+  },
+  computed: {
+    availableOptions() {
+      return this.options.filter(opt => this.value.indexOf(opt) === -1)
     }
   }
 }
