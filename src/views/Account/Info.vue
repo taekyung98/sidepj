@@ -42,7 +42,7 @@
               <br>
               <div class="d-flex ">
                 <div class="text-center col-lg-10 ml-lg-5">
-                  <b-button class="btn btn-lg btn-secondary rounded-pill mr-3" type="submit" to="/"><a style="color: white">동의 및 저장</a></b-button>
+                  <b-button class="btn btn-lg btn-secondary rounded-pill mr-3" type="submit" ><a style="color: white">동의 및 저장</a></b-button>
                   <b-button class="btn btn-lg rounded-pill" variant="outline-secondary" type="submit" to="">취소</b-button>
                 </div>
                 <DeleteAccount></DeleteAccount>

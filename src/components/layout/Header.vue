@@ -19,7 +19,6 @@
              <b-dropdown-item to="/login">About JIDO.VILL</b-dropdown-item>
              <b-dropdown-item ><router-link to="/">JIDO.Market</router-link></b-dropdown-item>
              <b-dropdown-item ><router-link to="/">공지사항</router-link></b-dropdown-item>
-             <b-dropdown-item ><router-link to="/">도움말</router-link></b-dropdown-item>
            </b-nav-item-dropdown>
          </b-navbar-nav>
 

@@ -8,6 +8,7 @@ import SignUpAgree from '../views/Login/SignUpAgree.vue'
 import SignUp from '../views/Login/SignUp.vue'
 import Info from '../views/Account/Info.vue'
 import Profile from '../views/Account/Profile.vue'
+import Upload from '../views/Upload.vue'
 
 Vue.use(VueRouter)
 
@@ -59,6 +60,11 @@ const routes: Array<RouteConfig> = [
     path: '/Account/Profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/Upload',
+    name: 'Upload',
+    component: Upload
   },
 ]
 
