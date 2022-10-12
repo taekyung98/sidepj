@@ -9,6 +9,7 @@ import SignUp from '../views/Login/SignUp.vue'
 import Info from '../views/Account/Info.vue'
 import Profile from '../views/Account/Profile.vue'
 import Upload from '../views/Upload.vue'
+import Notice from '../views/Notice/Notice.vue'
 
 Vue.use(VueRouter)
 
@@ -42,7 +43,7 @@ const routes: Array<RouteConfig> = [
     component: ChgPwd
   },
   {
-    path: '/Login/lSignUp',
+    path: '/Login/SignUp',
     name: 'SignUp',
     component: SignUp
   },
@@ -65,6 +66,11 @@ const routes: Array<RouteConfig> = [
     path: '/Upload',
     name: 'Upload',
     component: Upload
+  },
+  {
+    path: '/Notice',
+    name: 'Notice',
+    component: Notice
   },
 ]
 

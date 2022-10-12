@@ -1,13 +1,11 @@
 <template>
-  <div class="mb-3 d-flex justify-content-center" >
-    <label class="col-sm-3  align-self-center">활동 분야</label>
-    <b-form-group label-for="tags-component-select" class="col-sm-6 p-0"  >
+    <b-form-group label-for="tags-component-select"  >
       <!-- Prop `add-on-change` is needed to enable adding tags vie the `change` event -->
       <b-form-tags
           id="tags-component-select"
           v-model="value"
           size="lg"
-          class="mb-2"
+          class=""
           add-on-change
           no-outer-focus
       >
@@ -37,7 +35,6 @@
         </template>
       </b-form-tags>
     </b-form-group>
-  </div>
 </template>
 <script>
 export default {

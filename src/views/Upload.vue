@@ -8,8 +8,6 @@
               <b-form @submit="onSubmit" @reset="onReset">
                 <b-form-group
                     id="input-group-1"
-                    label="제목"
-                    label-for="input-1"
                     description=""
                 >
                   <b-form-input
@@ -18,18 +16,28 @@
                       type="text"
                       required
                       placeholder="제목을 입력하세요"
+                      style="border: white; box-shadow: none;"
                   ></b-form-input>
+                  <hr>
                 </b-form-group>
 
-                <b-form-group  v-show="txtToggle" id="input-group-2" label="내용" label-for="input-2">
-                  <b-form-input id="input-2" v-model="form.content" placeholder=""></b-form-input>
+
+                <div id="ShowImg">
+                  <b-img :src="previewImageData"></b-img>
+                </div>
+
+                <b-form-group v-b-hover="handleHover" v-show="txtToggle" id="input-group-2" >
+                  <div class="d-flex">
+                    <b-textarea id="input-2" v-model="form.content" placeholder="여기에 텍스트를 입력하세요.." style="border: white; box-shadow: none;"></b-textarea>
+                    <b-button v-if="isHovered" variant="transparent" @click="resetContent"  >
+                      <b-icon icon="x" style="width: 30px; height:30px;" > </b-icon>
+                    </b-button>
+                  </div>
                 </b-form-group>
+
 
                 <b-form-group id="input-group-3" >
                   <!-- <div class="mt-3">Selected file: {{ form.file ? form.file.name : '' }}</div>-->
-                  <div>
-                    <b-img :src="previewImageData"></b-img>
-                  </div>
 
                   <div class="d-flex justify-content-center">
                     <div >
@@ -53,11 +61,9 @@
 
                   </div>
 
-
-                    <!--이후 태그 추가작업 ㄱㄱ-->
-
-
                 </b-form-group>
+
+                <ChooseGenre></ChooseGenre>
 
                 <hr>
                 <br>
@@ -72,10 +78,11 @@
 
                 <div class="text-center" >
                   <b-button type="submit" class="btn btn-lg btn-secondary rounded-pill mr-3" >Submit</b-button>
-                  <b-button type="reset" variant="danger">Reset</b-button>
+                  <b-button type="reset" class="btn btn-lg rounded-pill" variant="outline-secondary">초기화</b-button>
                 </div>
 
               </b-form>
+
               <b-card class="mt-3" header="Form Data Result" v-if="show">
                 <pre class="m-0">{{ form }}</pre>
               </b-card>
@@ -90,8 +97,11 @@
 </template>
 
 <script>
+import ChooseGenre from "@/components/ChooseGenre";
+
 export default {
   name: "Upload",
+  components: {ChooseGenre},
   data() {
     return {
       form: {
@@ -102,9 +112,17 @@ export default {
       txtToggle: false,
       show: true,
       previewImageData: null,
+      isHovered: false,
     };
   },
   methods: {
+    resetContent(){
+      this.txtToggle = false,
+      this.form.content = "";
+    },
+    handleHover(hovered) {
+      this.isHovered = hovered
+    },
     uploadFile() {
       this.$refs.file.$el.childNodes[0].click();
     },
@@ -161,5 +179,6 @@ body {
 .card {
   border-radius: 1rem;
 }
+
 
 </style>

@@ -17,7 +17,10 @@
                 <b-input type="text" class="form-control form-control-lg col-sm-6"/>
               </div>
 
-              <ChooseGenre></ChooseGenre>
+              <div class=" d-flex justify-content-center" >
+                <label class="col-sm-3  align-self-center">활동 분야</label>
+                <ChooseGenre class="col-sm-6 p-0"></ChooseGenre>
+              </div>
 
               <div class="mb-3 d-flex justify-content-center" >
                 <label class="col-sm-3  align-self-center">웹사이트</label>
@@ -48,9 +51,6 @@
 </template>
 
 <script>
-import ChooseGreeting from "@/components/ChooseGreeting";
-import UploadProfile from "@/components/UploadProfile";
-import DeleteAccount from "@/components/DeleteAccount";
 import ChooseGenre from "@/components/ChooseGenre";
 export default {
   components: {ChooseGenre}

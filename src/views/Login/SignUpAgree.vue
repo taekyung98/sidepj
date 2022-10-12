@@ -7,15 +7,15 @@
     </div>
     <div>
       <div class="card mb-3">
-        <div class="card-body d-flex align-items-center ">
+        <div class="card-body d-flex align-items-center " style="padding: 20px 40px ">
           <b-icon class="h5 mr-2 mt-2" icon="exclamation-circle-fill" variant="secondary"></b-icon>
           <p class="mb-0"> 회원가입약관 및 개인정보처리방침안내의 내용에 동의하셔야 회원가입 하실 수 있습니다.</p>
         </div>
       </div>
 
       <div class="card mb-3" >
-        <div class="card-body">
-          <div class="d-flex align-items-center">
+        <div class="card-body" style="padding: 20px 40px ">
+          <div class="d-flex align-items-center" >
             <b-icon class="h3 mr-2 mt-2" icon="file-earmark-text" variant="secondary"></b-icon>
             <h5 class="h5 mb-0 font-weight-bold text-secondary" >회원가입 약관</h5>
           </div>
@@ -31,8 +31,8 @@
       </div>
 
       <div class="card mb-3" >
-        <div class="card-body">
-          <div class="d-flex align-items-center">
+        <div class="card-body" style="padding: 20px 40px ">
+          <div class="d-flex align-items-center" >
             <b-icon class="h3 mr-2 mt-2" icon="person-fill" variant="secondary"></b-icon>
             <h5 class="h5 mb-0 font-weight-bold text-secondary" >개인정보처리방침 안내</h5>
           </div>

@@ -7,15 +7,15 @@
     </div>
     <div>
       <div class="card mb-3" >
-        <div class="card-body">
+        <div class="card-body" style="padding: 20px 40px " >
           <div class="d-flex align-items-center">
-            <h4 class="h4 mb-0 font-weight-bold text-secondary">회원가입</h4>
+            <h3 class=" mb-0 font-weight-bold text-center">회원가입</h3>
           </div>
         </div>
       </div>
 
       <div class="card mb-3" >
-        <div class="card-body">
+        <div class="card-body" style="padding: 20px 40px ">
           <div class="d-flex align-items-center">
             <b-icon class="h3 mr-2 mt-2" icon="palette" variant="secondary"></b-icon>
             <h5 class="h5 mb-0 font-weight-bold text-secondary">사이트 이용정보 입력</h5>
@@ -41,7 +41,7 @@
       </div>
 
       <div class="card " >
-        <div class="card-body">
+        <div class="card-body" style="padding: 20px 40px ">
           <div class="d-flex align-items-center">
             <b-icon class="h3 mr-2 mt-2" icon="person-fill" variant="secondary"></b-icon>
             <h5 class="h5 mb-0 font-weight-bold text-secondary">개인정보 입력</h5>

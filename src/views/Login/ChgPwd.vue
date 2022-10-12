@@ -7,8 +7,8 @@
     </div>
     <div class="card ">
       <div class="card-body ">
-        <b-form>
-          <h2 class="h3 mb-3 font-weight-bold text-center">비밀번호 변경</h2>
+        <b-form  style="padding: 20px 40px ">
+          <h3 class=" mb-3 font-weight-bold text-center">비밀번호 변경</h3>
 
           <div class="form-group">
             <label>새 비밀번호</label>
@@ -53,7 +53,7 @@ img{
 
 .form-signin {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
