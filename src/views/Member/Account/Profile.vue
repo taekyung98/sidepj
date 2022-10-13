@@ -5,7 +5,7 @@
       <div class="card mb-3" >
         <div class="card-body" >
 
-          <div style="padding: 50px 200px">
+          <div style="padding: 70px 200px">
             <b-form-group >
               <div class="mb-3 d-flex justify-content-center" >
                 <label class="col-sm-3 align-self-center">한 줄 소개</label>

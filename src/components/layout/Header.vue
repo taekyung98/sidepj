@@ -18,7 +18,7 @@
              </template>
              <b-dropdown-item to="/login">About JIDO.VILL</b-dropdown-item>
              <b-dropdown-item to="/">JIDO.Market</b-dropdown-item>
-             <b-dropdown-item to="/notice">공지사항</b-dropdown-item>
+             <b-dropdown-item to="/notice/noticelist">공지사항</b-dropdown-item>
            </b-nav-item-dropdown>
          </b-navbar-nav>
 
@@ -51,7 +51,7 @@ export default {
 
 <style>
 #nav {
-  padding: 20px 120px;
+  padding: 20px 200px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /*background-color: white;*/
 }

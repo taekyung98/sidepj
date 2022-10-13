@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Login from '../views/Login/Login.vue'
-import FindPwd from '../views/Login/FindPwd.vue'
-import ChgPwd from '../views/Login/ChgPwd.vue'
-import SignUpAgree from '../views/Login/SignUpAgree.vue'
-import SignUp from '../views/Login/SignUp.vue'
-import Info from '../views/Account/Info.vue'
-import Profile from '../views/Account/Profile.vue'
+import Login from '../views/Member/Login/Login.vue'
+import FindPwd from '../views/Member/Login/FindPwd.vue'
+import ChgPwd from '../views/Member/Login/ChgPwd.vue'
+import SignUpAgree from '../views/Member/Login/SignUpAgree.vue'
+import SignUp from '../views/Member/Login/SignUp.vue'
+import Info from '../views/Member/Account/Info.vue'
+import Profile from '../views/Member/Account/Profile.vue'
 import Upload from '../views/Upload.vue'
-import Notice from '../views/Notice/Notice.vue'
+import Notice from '../views/Admin/Notice/Notice.vue'
+import NoticeDetail from '../views/Admin/Notice/NoticeDetail.vue'
+import NoticeWrite from '../views/Admin/Notice/NoticeWrite.vue'
+
 
 Vue.use(VueRouter)
 
@@ -68,10 +71,21 @@ const routes: Array<RouteConfig> = [
     component: Upload
   },
   {
-    path: '/Notice',
+    path: '/Notice/NoticeList',
     name: 'Notice',
     component: Notice
   },
+  {
+    path: '/Notice/NoticeDetail/:NoticeId',
+    name: 'NoticeDetail',
+    component: NoticeDetail
+  },
+  {
+    path: '/Notice/NoticeWrite/:NoticeId?',
+    name: 'NoticeWrite',
+    component: NoticeWrite
+  },
+
 ]
 
 const router = new VueRouter({
